@@ -1,16 +1,30 @@
+let discount = false;
 const age = prompt("quanti anni hai?");
 const km = prompt("quanti kilometri vuoi percorrere?");
 
-price = 0.21*km;
+firstPrice = 0.21*km;
 
 if(age < 18) {
-    price = price - (20*price)/100;
+    finalPrice = firstPrice - (20*firstPrice)/100;
+    discount = true;
 }
 
 else if (age >= 65) {
-    price = price - (40*price)/100;
+    finalPrice = firstPrice - (40*firstPrice)/100;
+    discount = true;
 }
 
-rounded = price.toFixed(2);
+else {
+    finalPrice = firstPrice;
+}
 
-document.getElementById("price").innerHTML = rounded;
+rounded = finalPrice.toFixed(2);
+
+if (discount) {
+    document.getElementById("price").innerHTML ="prezzo iniziale: " + firstPrice + "$";
+    document.getElementById("price-d").innerHTML ="prezzo scontato: " + rounded + "$";
+}
+
+else {
+    document.getElementById("price").innerHTML ="prezzo biglietto: " + firstPrice + "$";
+}
