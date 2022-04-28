@@ -23,7 +23,7 @@ for (let i=0; i < N; i++) {
 
     rounded = finalPrice.toFixed(2);
 
-    document.getElementById("container").innerHTML += "biglietto numero "+ (i+1)+": " + "<br>";
+    document.getElementById("container").innerHTML += "biglietto numero "+ (i+1) + ": " + "<br>";
 
     if (discount) {
         document.getElementById("container").innerHTML +="prezzo iniziale: " + firstPrice + "$" + "<br>";

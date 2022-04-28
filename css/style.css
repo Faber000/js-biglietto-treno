@@ -2,8 +2,19 @@
     margin: auto;
     padding: 50px;
     width: 500px;
-    height: 500px;
-    background-color: coral;
-    color: white;
+    background-color: lightgray;
+    opacity: 0.5;
+    color: black;
+    border-radius: 20px;
     font-size: large;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+body {
+    background-image: url("../img/train.jpg");
+    background-size: cover;
 }
